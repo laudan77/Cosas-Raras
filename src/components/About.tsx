@@ -2,13 +2,19 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 
 const FIELDS = [
-  "Arquitectura",
-  "Interiorismo",
-  "Escenografía",
-  "Dirección de arte",
-  "Danza",
-  "Teatro",
-];
+  { label: "Arquitectura", accent: "wine" },
+  { label: "Interiorismo", accent: "olive" },
+  { label: "Escenografía", accent: "blush" },
+  { label: "Dirección de arte", accent: "wine" },
+  { label: "Danza", accent: "olive" },
+  { label: "Teatro", accent: "blush" },
+] as const;
+
+const FIELD_HOVER_CLASSES = {
+  wine: "hover:border-wine hover:text-wine",
+  olive: "hover:border-olive hover:text-olive",
+  blush: "hover:border-blush hover:text-blush",
+} as const;
 
 export default function About() {
   return (
@@ -27,7 +33,7 @@ export default function About() {
       <div className="relative mx-auto max-w-5xl px-6 text-center md:px-10">
         <Reveal>
           <p className="font-body text-xs font-semibold uppercase tracking-[0.35em] text-blush">
-            Sobre Lau
+            Sobre Cosas Raras
           </p>
         </Reveal>
 
@@ -50,20 +56,20 @@ export default function About() {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <div className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-3">
-            {FIELDS.map((f) => (
-              <span
-                key={f}
-                className="rounded-full border border-cream/25 px-4 py-2 font-body text-xs font-medium uppercase tracking-wide text-cream/70 transition-colors hover:border-blush hover:text-blush"
-              >
-                {f}
-              </span>
-            ))}
-          </div>
+          <p className="mt-14 font-display text-2xl italic text-blush">— Lau.</p>
         </Reveal>
 
         <Reveal delay={0.4}>
-          <p className="mt-14 font-display text-2xl italic text-blush">— Lau.</p>
+          <div className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-3">
+            {FIELDS.map((f) => (
+              <span
+                key={f.label}
+                className={`rounded-full border border-cream/25 px-4 py-2 font-body text-xs font-medium uppercase tracking-wide text-cream/70 transition-colors ${FIELD_HOVER_CLASSES[f.accent]}`}
+              >
+                {f.label}
+              </span>
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>

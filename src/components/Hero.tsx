@@ -51,12 +51,12 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_20%] opacity-[0.55]"
+          className="object-cover object-[50%_20%] opacity-[0.8]"
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-ink/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink/40 via-transparent to-ink/25" />
 
       {/* animated rays, echoing the lamp's own light pattern */}
       <div

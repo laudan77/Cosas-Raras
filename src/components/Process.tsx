@@ -10,16 +10,19 @@ const STEPS = [
     n: "01",
     title: "Diseño",
     text: "Cada pieza nace como un boceto de arquitectura: proporción, ritmo y el hueco exacto por donde se escapa la luz.",
+    accent: "text-blush",
   },
   {
     n: "02",
     title: "Corte y curva",
     text: "Los listones de madera se cortan y curvan uno a uno hasta formar la esfera que va a sostener el bombillo.",
+    accent: "text-olive",
   },
   {
     n: "03",
     title: "Armado a mano",
     text: "Todo se ensambla a mano, sin moldes en serie. Por eso cada Cosas Raras es, literalmente, una pieza única.",
+    accent: "text-blush",
   },
 ];
 
@@ -64,7 +67,7 @@ export default function Process() {
           {STEPS.map((s, i) => (
             <Reveal key={s.n} delay={0.15 * i}>
               <div className="border-t border-cream/20 pt-6">
-                <span className="font-display text-sm font-bold text-blush">
+                <span className={`font-display text-sm font-bold ${s.accent}`}>
                   {s.n}
                 </span>
                 <h3 className="mt-3 font-display text-2xl font-bold text-cream">

@@ -23,7 +23,7 @@ export default function Contact() {
     .join(" ");
 
   return (
-    <section id="contacto" className="relative overflow-hidden bg-wine py-28 md:py-36">
+    <section id="contacto" className="relative overflow-hidden bg-teal-dark py-28 md:py-36">
       <Image
         src="/images/sconce-detail.webp"
         alt=""

@@ -56,12 +56,3 @@ export const GALLERY = [
   { src: "/images/gallery-skylights.webp", caption: "Bajo los tragaluces" },
   { src: "/images/gallery-burgundy.webp", caption: "Tejida, en la entrada" },
 ];
-
-export const MARQUEE_WORDS = [
-  "ESCENOGRAFÍA SENSORIAL",
-  "HECHO A MANO",
-  "ARQUITECTURA DE LA LUZ",
-  "DISEÑO ORGÁNICO",
-  "EDICIÓN A PEDIDO",
-  "COSAS RARAS",
-];
