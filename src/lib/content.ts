@@ -35,6 +35,7 @@ export type Product = {
   price: string;
   description: string;
   image: string;
+  images?: string[];
   specs?: ProductSpec[];
   diyNote?: string;
   comingSoon?: boolean;
@@ -48,7 +49,12 @@ export const PRODUCTS: Product[] = [
     price: "$280.000 COP",
     description:
       "Una esfera de listones que respira. Cuelga en el centro del espacio y convierte cualquier techo en cielo encendido.",
-    image: "/images/product-aura.webp",
+    image: "/images/product-aura-1.webp",
+    images: [
+      "/images/product-aura-1.webp",
+      "/images/product-aura-2.webp",
+      "/images/product-aura-3.webp",
+    ],
     specs: [
       { label: "Uso", value: "Lámpara de techo descolgada, preferiblemente para sala o comedor." },
       { label: "Tamaño", value: "30 x 35 cm" },

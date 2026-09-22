@@ -8,12 +8,19 @@ import ProductModal from "./ProductModal";
 export default function ProductCard({ product }: { product: Product }) {
   const [color, setColor] = useState<Colorway>(COLORWAYS[0]);
   const [showModal, setShowModal] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
+  const photos = product.images && product.images.length > 0 ? product.images : [product.image];
+
+  const changePhoto = (dir: 1 | -1) => {
+    setPhotoIndex((i) => (i + dir + photos.length) % photos.length);
+  };
 
   return (
     <div className="group w-[82vw] flex-none snap-center sm:w-[52vw] md:w-[36vw] lg:w-[30vw]">
       <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-ink">
         <Image
-          src={product.image}
+          src={photos[photoIndex]}
           alt={`Lámpara ${product.name} de Cosas Raras encendida`}
           fill
           sizes="(min-width: 1024px) 30vw, (min-width: 768px) 36vw, (min-width: 640px) 52vw, 82vw"
@@ -29,6 +36,43 @@ export default function ProductCard({ product }: { product: Product }) {
             </span>
           )}
         </div>
+
+        {photos.length > 1 && (
+          <>
+            <button
+              type="button"
+              aria-label="Foto anterior"
+              data-cursor="lg"
+              onClick={() => changePhoto(-1)}
+              className="absolute left-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-cream/85 text-ink transition-transform hover:scale-110"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              aria-label="Foto siguiente"
+              data-cursor="lg"
+              onClick={() => changePhoto(1)}
+              className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-cream/85 text-ink transition-transform hover:scale-110"
+            >
+              →
+            </button>
+            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">
+              {photos.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  aria-label={`Ver foto ${i + 1}`}
+                  data-cursor="lg"
+                  onClick={() => setPhotoIndex(i)}
+                  className={`h-1.5 w-1.5 rounded-full transition-colors ${
+                    i === photoIndex ? "bg-cream" : "bg-cream/40"
+                  }`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
       <div className="mt-4 flex items-center justify-between">
