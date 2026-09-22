@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { EMAIL, FIELDS, PORTFOLIO_URL, WHATSAPP_DISPLAY, waLink } from "@/lib/content";
 
 const FIELD_HOVER_CLASSES = {
@@ -24,10 +25,14 @@ export default function Footer() {
 
       <div className="mx-auto mt-10 flex max-w-6xl flex-col gap-8 px-6 md:flex-row md:items-center md:justify-between md:px-10">
         <div>
-          <p className="font-display text-xl font-extrabold text-cream">
-            COSAS<span className="text-wine">·</span>RARAS
-          </p>
-          <p className="mt-2 max-w-xs font-body text-sm text-cream/50">
+          <Image
+            src="/images/logo-light.png"
+            alt="Cosas Raras"
+            width={719}
+            height={742}
+            className="h-12 w-auto"
+          />
+          <p className="mt-3 max-w-xs font-body text-sm text-cream/50">
             Objetos hechos a mano por Laura Daniela Galvis, arquitecta y
             escenógrafa.
           </p>
