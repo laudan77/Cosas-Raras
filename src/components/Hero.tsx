@@ -84,10 +84,15 @@ export default function Hero() {
         style={{ x: parallaxX, y: parallaxY, opacity: fade }}
         className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-16 pt-40 md:px-10 md:pb-24"
       >
-        <h1 className="font-display text-[15vw] font-black uppercase leading-[0.85] tracking-tight text-cream sm:text-[10vw] md:text-[7.2vw] lg:text-[6.2rem]">
-          Cosas
-          <br />
-          <span className="text-outline">Raras</span>
+        <h1>
+          <Image
+            src="/images/logo-light.png"
+            alt="Cosas Raras"
+            width={719}
+            height={742}
+            priority
+            className="h-auto w-[48vw] max-w-[220px] sm:w-[34vw] sm:max-w-[280px] md:max-w-[340px]"
+          />
         </h1>
 
         <div className="mt-8 flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between">
