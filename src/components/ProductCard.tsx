@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
-import { Product } from "@/lib/content";
+import { COLORWAYS, Colorway, Product } from "@/lib/content";
 
 export default function ProductCard({ product }: { product: Product }) {
+  const [color, setColor] = useState<Colorway>(COLORWAYS[0]);
+
   return (
     <div className="group w-[82vw] flex-none snap-center sm:w-[52vw] md:w-[36vw] lg:w-[30vw]">
       <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-ink">
@@ -16,6 +21,27 @@ export default function ProductCard({ product }: { product: Product }) {
           <span className="font-display text-3xl font-extrabold uppercase tracking-wide text-cream">
             {product.name}
           </span>
+        </div>
+      </div>
+
+      <div className="mt-4 flex items-center justify-between">
+        <p className="font-body text-sm font-semibold text-wine">{product.price}</p>
+        <div className="flex items-center gap-2">
+          {COLORWAYS.map((c) => (
+            <button
+              key={c.id}
+              type="button"
+              data-cursor="lg"
+              aria-label={c.label}
+              onClick={() => setColor(c)}
+              className="relative h-5 w-5 rounded-full transition-transform hover:scale-110"
+              style={{ backgroundColor: c.hex }}
+            >
+              {color.id === c.id && (
+                <span className="absolute -inset-1 rounded-full border border-ink/50" />
+              )}
+            </button>
+          ))}
         </div>
       </div>
     </div>
