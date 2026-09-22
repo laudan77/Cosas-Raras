@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { COLORWAYS, Colorway, Product } from "@/lib/content";
+import ProductModal from "./ProductModal";
 
 export default function ProductCard({ product }: { product: Product }) {
   const [color, setColor] = useState<Colorway>(COLORWAYS[0]);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="group w-[82vw] flex-none snap-center sm:w-[52vw] md:w-[36vw] lg:w-[30vw]">
@@ -26,24 +28,40 @@ export default function ProductCard({ product }: { product: Product }) {
 
       <div className="mt-4 flex items-center justify-between">
         <p className="font-body text-sm font-semibold text-wine">{product.price}</p>
-        <div className="flex items-center gap-2">
-          {COLORWAYS.map((c) => (
+        <div className="flex items-center gap-4">
+          {product.specs && (
             <button
-              key={c.id}
               type="button"
               data-cursor="lg"
-              aria-label={c.label}
-              onClick={() => setColor(c)}
-              className="relative h-5 w-5 rounded-full transition-transform hover:scale-110"
-              style={{ backgroundColor: c.hex }}
+              onClick={() => setShowModal(true)}
+              className="font-body text-xs font-semibold uppercase tracking-wide text-ink/60 underline underline-offset-2 transition-colors hover:text-wine"
             >
-              {color.id === c.id && (
-                <span className="absolute -inset-1 rounded-full border border-ink/50" />
-              )}
+              Ver más
             </button>
-          ))}
+          )}
+          <div className="flex items-center gap-2">
+            {COLORWAYS.map((c) => (
+              <button
+                key={c.id}
+                type="button"
+                data-cursor="lg"
+                aria-label={c.label}
+                onClick={() => setColor(c)}
+                className="relative h-5 w-5 rounded-full transition-transform hover:scale-110"
+                style={{ backgroundColor: c.hex }}
+              >
+                {color.id === c.id && (
+                  <span className="absolute -inset-1 rounded-full border border-ink/50" />
+                )}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
+
+      {showModal && (
+        <ProductModal product={product} onClose={() => setShowModal(false)} />
+      )}
     </div>
   );
 }

@@ -25,6 +25,8 @@ export const COLORWAYS = [
 export type ColorwayId = (typeof COLORWAYS)[number]["id"];
 export type Colorway = (typeof COLORWAYS)[number];
 
+export type ProductSpec = { label: string; value: string };
+
 export type Product = {
   id: string;
   name: string;
@@ -33,6 +35,8 @@ export type Product = {
   price: string;
   description: string;
   image: string;
+  specs?: ProductSpec[];
+  diyNote?: string;
 };
 
 export const PRODUCTS: Product[] = [
@@ -44,6 +48,18 @@ export const PRODUCTS: Product[] = [
     description:
       "Una esfera de listones que respira. Cuelga en el centro del espacio y convierte cualquier techo en cielo encendido.",
     image: "/images/product-aura.webp",
+    specs: [
+      { label: "Uso", value: "Lámpara de techo descolgada, preferiblemente para sala o comedor." },
+      { label: "Tamaño", value: "30 x 35 cm" },
+      { label: "Material", value: "MDF acabado pintura acrílica" },
+      { label: "Color", value: "Personalizado" },
+      {
+        label: "Bombillo",
+        value: "LED filamento, 125 mm diámetro, 6W potencia, tono de luz cálida, 2.200K",
+      },
+      { label: "Armado", value: "Ensamble de piezas, no necesita tornillos ni pegante." },
+    ],
+    diyNote: "Puedes armarla tú mismo, te enviaremos un instructivo.",
   },
   {
     id: "frida",
