@@ -1,5 +1,5 @@
-export const WHATSAPP_NUMBER = "573504507151";
-export const WHATSAPP_DISPLAY = "+57 350 450 7151";
+export const WHATSAPP_NUMBER = "573044917469";
+export const WHATSAPP_DISPLAY = "+57 304 491 7469";
 export const EMAIL = "Lauradanielagalvis77@gmail.com";
 export const PORTFOLIO_URL = "https://lauradanielgalvis.squarespace.com/";
 
