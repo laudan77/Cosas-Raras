@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { WHATSAPP_DISPLAY, waLink } from "@/lib/content";
 
 const LINKS = [
-  { href: "#lamparas", label: "Lámparas" },
-  { href: "#proceso", label: "Proceso" },
-  { href: "#historias", label: "Historias" },
+  { href: "#sobre", label: "Sobre Cosas Raras" },
+  { href: "#lamparas", label: "Catálogo" },
+  { href: "#proceso", label: "Procesos" },
   { href: "#contacto", label: "Cotizar" },
 ];
 
@@ -31,52 +31,55 @@ export default function Nav() {
         scrolled ? "bg-cream/85 backdrop-blur-md shadow-[0_1px_0_rgba(26,17,18,0.08)]" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
-        <a
-          href="#top"
-          data-cursor="lg"
-          className="font-display text-lg font-extrabold tracking-tight text-ink"
-        >
-          COSAS<span className="text-wine">·</span>RARAS
-        </a>
-
-        <nav className="hidden items-center gap-8 md:flex">
+      <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 py-5 md:px-10">
+        <nav className="hidden items-center gap-7 md:flex">
           {LINKS.map((l) => (
             <a
               key={l.href}
               href={l.href}
               data-cursor="lg"
-              className="group relative font-body text-sm font-medium uppercase tracking-wide text-ink/80 transition-colors hover:text-wine"
+              className="group relative font-body text-xs font-medium uppercase tracking-[0.15em] text-ink/80 transition-colors hover:text-wine"
             >
               {l.label}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-wine transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
+        </nav>
+
+        <a
+          href="#top"
+          data-cursor="lg"
+          className="col-start-2 font-display text-base font-extrabold tracking-tight text-ink md:justify-self-center"
+        >
+          COSAS<span className="text-wine">·</span>RARAS
+        </a>
+
+        <div className="col-start-3 flex justify-end">
           <a
             href={waLink("Hola Lau, escribo desde cosasraras.co, quiero conocer más sobre las lámparas.")}
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="lg"
-            className="rounded-full bg-wine px-5 py-2 font-body text-sm font-semibold text-cream transition-transform hover:scale-105"
+            className="hidden items-center gap-2 rounded-full border border-ink/20 px-4 py-1.5 font-body text-xs font-medium text-ink/70 transition-colors hover:border-wine hover:text-wine md:inline-flex"
           >
             {WHATSAPP_DISPLAY}
           </a>
-        </nav>
 
-        <button
-          aria-label="Abrir menú"
-          data-cursor="lg"
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span
-            className={`h-px w-6 bg-ink transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
-          />
-          <span className={`h-px w-6 bg-ink transition-opacity ${open ? "opacity-0" : ""}`} />
-          <span
-            className={`h-px w-6 bg-ink transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
-          />
-        </button>
+          <button
+            aria-label="Abrir menú"
+            data-cursor="lg"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span
+              className={`h-px w-6 bg-ink transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <span className={`h-px w-6 bg-ink transition-opacity ${open ? "opacity-0" : ""}`} />
+            <span
+              className={`h-px w-6 bg-ink transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
 
       {open && (

@@ -7,6 +7,15 @@ export function waLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
+export const FIELDS = [
+  { label: "Arquitectura", accent: "wine" },
+  { label: "Interiorismo", accent: "olive" },
+  { label: "Escenografía", accent: "blush" },
+  { label: "Dirección de arte", accent: "wine" },
+  { label: "Danza", accent: "olive" },
+  { label: "Teatro", accent: "blush" },
+] as const;
+
 export const COLORWAYS = [
   { id: "vino", label: "Vino", hex: "#6E1E3B" },
   { id: "oliva", label: "Oliva", hex: "#C9D863" },

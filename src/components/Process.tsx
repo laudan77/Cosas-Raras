@@ -58,8 +58,8 @@ export default function Process() {
           </p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-[0.95] text-cream sm:text-5xl">
-            Orgánico. A mano. Sin dos piezas iguales.
+          <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-[0.95] text-olive sm:text-5xl">
+            Orgánico, a mano, ¡ármala tú mismo!
           </h2>
         </Reveal>
 

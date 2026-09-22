@@ -1,24 +1,9 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 
-const FIELDS = [
-  { label: "Arquitectura", accent: "wine" },
-  { label: "Interiorismo", accent: "olive" },
-  { label: "Escenografía", accent: "blush" },
-  { label: "Dirección de arte", accent: "wine" },
-  { label: "Danza", accent: "olive" },
-  { label: "Teatro", accent: "blush" },
-] as const;
-
-const FIELD_HOVER_CLASSES = {
-  wine: "hover:border-wine hover:text-wine",
-  olive: "hover:border-olive hover:text-olive",
-  blush: "hover:border-blush hover:text-blush",
-} as const;
-
 export default function About() {
   return (
-    <section className="relative overflow-hidden bg-ink py-28 md:py-36">
+    <section id="sobre" className="relative overflow-hidden bg-ink py-28 md:py-36">
       <div className="absolute inset-0">
         <Image
           src="/images/bg-showroom.webp"
@@ -57,19 +42,6 @@ export default function About() {
 
         <Reveal delay={0.3}>
           <p className="mt-14 font-display text-2xl italic text-blush">— Lau.</p>
-        </Reveal>
-
-        <Reveal delay={0.4}>
-          <div className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-3">
-            {FIELDS.map((f) => (
-              <span
-                key={f.label}
-                className={`rounded-full border border-cream/25 px-4 py-2 font-body text-xs font-medium uppercase tracking-wide text-cream/70 transition-colors ${FIELD_HOVER_CLASSES[f.accent]}`}
-              >
-                {f.label}
-              </span>
-            ))}
-          </div>
         </Reveal>
       </div>
     </section>

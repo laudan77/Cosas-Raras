@@ -13,17 +13,17 @@ export default function Gallery() {
   };
 
   return (
-    <section id="historias" className="relative bg-cream py-28 md:py-36">
+    <section id="historias" className="relative bg-ink py-28 md:py-36">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <Reveal>
-              <p className="font-body text-xs font-semibold uppercase tracking-[0.35em] text-wine">
+              <p className="font-body text-xs font-semibold uppercase tracking-[0.35em] text-olive">
                 En casas reales
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-4 max-w-lg font-display text-4xl font-black leading-[0.95] text-ink sm:text-5xl">
+              <h2 className="mt-4 max-w-lg font-display text-4xl font-black leading-[0.95] text-blush sm:text-5xl">
                 Así se ve el estallido de luz.
               </h2>
             </Reveal>
@@ -35,7 +35,7 @@ export default function Gallery() {
                 data-cursor="lg"
                 aria-label="Anterior"
                 onClick={() => scrollBy(-1)}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-wine hover:text-wine"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-cream/20 text-cream transition-colors hover:border-blush hover:text-blush"
               >
                 ←
               </button>
@@ -43,7 +43,7 @@ export default function Gallery() {
                 data-cursor="lg"
                 aria-label="Siguiente"
                 onClick={() => scrollBy(1)}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-wine hover:text-wine"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-cream/20 text-cream transition-colors hover:border-blush hover:text-blush"
               >
                 →
               </button>

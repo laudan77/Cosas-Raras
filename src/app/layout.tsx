@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Unbounded, Work_Sans } from "next/font/google";
+import { Unbounded, Jost } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import Grain from "@/components/Grain";
@@ -11,7 +11,7 @@ const display = Unbounded({
   display: "swap",
 });
 
-const body = Work_Sans({
+const body = Jost({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
   variable: "--font-body",

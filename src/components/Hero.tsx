@@ -84,10 +84,6 @@ export default function Hero() {
         style={{ x: parallaxX, y: parallaxY, opacity: fade }}
         className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-16 pt-40 md:px-10 md:pb-24"
       >
-        <p className="mb-5 font-body text-xs font-semibold uppercase tracking-[0.35em] text-blush">
-          Laura Daniela Galvis · arquitecta &amp; escenógrafa
-        </p>
-
         <h1 className="font-display text-[15vw] font-black uppercase leading-[0.85] tracking-tight text-cream sm:text-[10vw] md:text-[7.2vw] lg:text-[6.2rem]">
           Cosas
           <br />

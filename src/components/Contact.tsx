@@ -41,7 +41,7 @@ export default function Contact() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-4 font-display text-4xl font-black leading-[0.95] text-cream sm:text-5xl">
-              Cuéntame tu espacio y te propongo una lámpara.
+              Personaliza tu casa con Cosas Raras. ¡Escríbeme y cotiza tu producto!
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
