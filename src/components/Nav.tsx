@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { WHATSAPP_DISPLAY, waLink } from "@/lib/content";
 
@@ -49,9 +50,16 @@ export default function Nav() {
         <a
           href="#top"
           data-cursor="lg"
-          className="col-start-2 font-display text-base font-extrabold tracking-tight text-ink md:justify-self-center"
+          className="col-start-2 md:justify-self-center"
         >
-          COSAS<span className="text-wine">·</span>RARAS
+          <Image
+            src="/images/logo.png"
+            alt="Cosas Raras"
+            width={719}
+            height={742}
+            priority
+            className="h-9 w-auto md:h-10"
+          />
         </a>
 
         <div className="col-start-3 flex justify-end">
