@@ -37,6 +37,7 @@ export type Product = {
   image: string;
   specs?: ProductSpec[];
   diyNote?: string;
+  comingSoon?: boolean;
 };
 
 export const PRODUCTS: Product[] = [
@@ -70,6 +71,7 @@ export const PRODUCTS: Product[] = [
     description:
       "La versión tejida a mano, hebra a hebra. Más textura, más sombra, el mismo estallido de luz sobre tu techo.",
     image: "/images/product-frida.webp",
+    comingSoon: true,
   },
 ];
 
