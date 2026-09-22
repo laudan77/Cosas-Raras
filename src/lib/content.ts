@@ -49,10 +49,10 @@ export const PRODUCTS: Product[] = [
     price: "$280.000 COP",
     description:
       "Una esfera de listones que respira. Cuelga en el centro del espacio y convierte cualquier techo en cielo encendido.",
-    image: "/images/product-aura-1.webp",
+    image: "/images/product-aura-2.webp",
     images: [
-      "/images/product-aura-1.webp",
       "/images/product-aura-2.webp",
+      "/images/product-aura-1.webp",
       "/images/product-aura-3.webp",
     ],
     specs: [
