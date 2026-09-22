@@ -23,29 +23,29 @@ export default function Contact() {
     .join(" ");
 
   return (
-    <section id="contacto" className="relative overflow-hidden bg-teal-dark py-28 md:py-36">
+    <section id="contacto" className="relative overflow-hidden bg-olive py-28 md:py-36">
       <Image
         src="/images/sconce-detail.webp"
         alt=""
         fill
         aria-hidden="true"
         sizes="100vw"
-        className="object-cover opacity-[0.12] mix-blend-screen"
+        className="object-cover opacity-[0.15] mix-blend-multiply"
       />
       <div className="relative mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-[1fr_1.1fr] md:px-10">
         <div>
           <Reveal>
-            <p className="font-body text-xs font-semibold uppercase tracking-[0.35em] text-blush">
+            <p className="font-body text-xs font-semibold uppercase tracking-[0.35em] text-wine">
               Hagamos una a tu medida
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-display text-4xl font-black leading-[0.95] text-cream sm:text-5xl">
+            <h2 className="mt-4 font-display text-4xl font-black leading-[0.95] text-ink sm:text-5xl">
               Personaliza tu casa con Cosas Raras. ¡Escríbeme y cotiza tu producto!
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-6 max-w-md font-body text-base leading-relaxed text-cream/80">
+            <p className="mt-6 max-w-md font-body text-base leading-relaxed text-ink/70">
               Cada lámpara se fabrica bajo pedido. Escríbeme el tamaño del
               lugar, la altura del techo y el color que te gusta, y te
               cuento tiempos y valor exacto.
@@ -53,20 +53,20 @@ export default function Contact() {
           </Reveal>
 
           <Reveal delay={0.3}>
-            <div className="mt-10 flex flex-col gap-3 font-body text-sm text-cream/90">
+            <div className="mt-10 flex flex-col gap-3 font-body text-sm text-ink/80">
               <a
                 href={waLink("Hola Lau, escribo desde cosasraras.co.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="lg"
-                className="inline-flex w-fit items-center gap-2 border-b border-cream/40 pb-1 transition-colors hover:border-cream"
+                className="inline-flex w-fit items-center gap-2 border-b border-ink/30 pb-1 transition-colors hover:border-ink"
               >
                 WhatsApp — {WHATSAPP_DISPLAY}
               </a>
               <a
                 href={`mailto:${EMAIL}`}
                 data-cursor="lg"
-                className="inline-flex w-fit items-center gap-2 border-b border-cream/40 pb-1 transition-colors hover:border-cream"
+                className="inline-flex w-fit items-center gap-2 border-b border-ink/30 pb-1 transition-colors hover:border-ink"
               >
                 {EMAIL}
               </a>
@@ -75,7 +75,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="lg"
-                className="inline-flex w-fit items-center gap-2 border-b border-cream/40 pb-1 transition-colors hover:border-cream"
+                className="inline-flex w-fit items-center gap-2 border-b border-ink/30 pb-1 transition-colors hover:border-ink"
               >
                 Ver portafolio de arquitectura y escenografía ↗
               </a>
