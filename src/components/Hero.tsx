@@ -86,7 +86,7 @@ export default function Hero() {
       >
         <h1>
           <Image
-            src="/images/logo-light.png"
+            src="/images/logo-blush.png"
             alt="Cosas Raras"
             width={719}
             height={742}
