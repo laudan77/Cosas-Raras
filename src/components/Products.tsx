@@ -14,42 +14,27 @@ export default function Products() {
 
   return (
     <section id="lamparas" className="relative bg-white py-28 md:py-36">
-      <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <Reveal>
-              <p className="font-body text-xs font-semibold uppercase tracking-[0.35em] text-wine">
-                Catálogo
-              </p>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="mt-4 max-w-2xl font-display text-4xl font-black leading-[0.95] text-ink sm:text-5xl md:text-6xl">
-                Dos formas de encender un cuarto.
-              </h2>
-            </Reveal>
+      <div className="mx-auto flex max-w-6xl justify-end px-6 md:px-10">
+        <Reveal>
+          <div className="flex gap-3">
+            <button
+              data-cursor="lg"
+              aria-label="Anterior"
+              onClick={() => scrollBy(-1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-wine hover:text-wine"
+            >
+              ←
+            </button>
+            <button
+              data-cursor="lg"
+              aria-label="Siguiente"
+              onClick={() => scrollBy(1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-wine hover:text-wine"
+            >
+              →
+            </button>
           </div>
-
-          <Reveal delay={0.2}>
-            <div className="flex gap-3">
-              <button
-                data-cursor="lg"
-                aria-label="Anterior"
-                onClick={() => scrollBy(-1)}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-wine hover:text-wine"
-              >
-                ←
-              </button>
-              <button
-                data-cursor="lg"
-                aria-label="Siguiente"
-                onClick={() => scrollBy(1)}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-wine hover:text-wine"
-              >
-                →
-              </button>
-            </div>
-          </Reveal>
-        </div>
+        </Reveal>
       </div>
 
       <Reveal delay={0.15}>

@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     price: "$280.000 COP",
     description:
       "Una esfera de listones que respira. Cuelga en el centro del espacio y convierte cualquier techo en cielo encendido.",
-    image: "/images/hero-main.webp",
+    image: "/images/product-aura.webp",
   },
   {
     id: "frida",
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
     price: "$280.000 COP",
     description:
       "La versión tejida a mano, hebra a hebra. Más textura, más sombra, el mismo estallido de luz sobre tu techo.",
-    image: "/images/gallery-burgundy.webp",
+    image: "/images/product-frida.webp",
   },
 ];
 
