@@ -86,6 +86,4 @@ export const GALLERY = [
   { src: "/images/gallery-kitchen.webp", caption: "Cocina, luz encendida" },
   { src: "/images/gallery-day.webp", caption: "De día, en reposo" },
   { src: "/images/gallery-warm.webp", caption: "El estallido sobre el techo" },
-  { src: "/images/gallery-skylights.webp", caption: "Bajo los tragaluces" },
-  { src: "/images/gallery-burgundy.webp", caption: "Tejida, en la entrada" },
 ];
